@@ -50,12 +50,3 @@ class HomeViewController: UITableViewController {
         }
     }
 }
-
-struct Tasks {
-    let task: TaskType
-}
-
-enum TaskType: String {
-    case first = "First Task"
-    case second = "Second Task"
-}

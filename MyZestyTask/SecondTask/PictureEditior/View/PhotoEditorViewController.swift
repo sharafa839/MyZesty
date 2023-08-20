@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotoEditorViewController: UIViewController {
+final class PhotoEditorViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var canvasView: UIView!
@@ -51,7 +51,7 @@ class PhotoEditorViewController: UIViewController {
     
     //MARK: - Methods
     
-    func setupCollectionView() {
+    private func setupCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 30, height: 30)
         layout.scrollDirection = .horizontal
@@ -65,17 +65,16 @@ class PhotoEditorViewController: UIViewController {
         }
         colorsCollectionView.delegate = colorsCollectionViewDelegate
         colorsCollectionView.dataSource = colorsCollectionViewDelegate
-        
         colorsCollectionView.register(ColorCollectionViewCell.nib, forCellWithReuseIdentifier: ColorCollectionViewCell.identifier)
     }
     
-    func setImageView(image: UIImage) {
+    private func setImageView(image: UIImage) {
         loadedImage.image = image
         guard let size = image.suitableSize(widthLimit: UIScreen.main.bounds.width) else { return }
         imageViewHeightConstraint.constant = size.height
     }
     
-    func hideToolbar(hide: Bool) {
+    private func hideToolbar(hide: Bool) {
         topToolbar.isHidden = hide
         topGradient.isHidden = hide
         bottomToolbar.isHidden = hide
@@ -85,34 +84,9 @@ class PhotoEditorViewController: UIViewController {
 
 extension PhotoEditorViewController: ColorDelegate {
     func didSelectColor(color: UIColor) {
-         if activeTextView != nil {
+        if activeTextView != nil {
             activeTextView?.textColor = color
             textColor = color
         }
-    }
-}
-
-
-
-
-
-
-public extension UIImage {
-    func suitableSize(heightLimit: CGFloat? = nil,
-                             widthLimit: CGFloat? = nil )-> CGSize? {
-        
-        if let height = heightLimit {
-            
-            let width = (height / self.size.height) * self.size.width
-            
-            return CGSize(width: width, height: height)
-        }
-        
-        if let width = widthLimit {
-            let height = (width / self.size.width) * self.size.height
-            return CGSize(width: width, height: height)
-        }
-        
-        return nil
     }
 }

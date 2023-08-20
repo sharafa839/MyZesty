@@ -41,6 +41,8 @@
 		FFF44A3E2A92A85500069C06 /* PhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A352A92A85500069C06 /* PhotoEditorViewController.swift */; };
 		FFF44A422A92A85C00069C06 /* UploadImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF44A402A92A85C00069C06 /* UploadImageViewController.xib */; };
 		FFF44A432A92A85C00069C06 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A412A92A85C00069C06 /* UploadImageViewController.swift */; };
+		FFF44A462A92B80F00069C06 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A452A92B80F00069C06 /* HomeModels.swift */; };
+		FFF44A482A92B86B00069C06 /* UIIMage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A472A92B86B00069C06 /* UIIMage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		FFF44A352A92A85500069C06 /* PhotoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEditorViewController.swift; sourceTree = "<group>"; };
 		FFF44A402A92A85C00069C06 /* UploadImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadImageViewController.xib; sourceTree = "<group>"; };
 		FFF44A412A92A85C00069C06 /* UploadImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
+		FFF44A452A92B80F00069C06 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		FFF44A472A92B86B00069C06 /* UIIMage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		FFF448872A9037CD00069C06 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FFF44A442A92B80300069C06 /* Model */,
 				FFF4488D2A90383000069C06 /* Adapter */,
 				FFF4488C2A90380000069C06 /* View */,
 			);
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF448A62A90FA4300069C06 /* UIVIew+Extension.swift */,
+				FFF44A472A92B86B00069C06 /* UIIMage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -279,6 +285,14 @@
 			path = UploadImage;
 			sourceTree = "<group>";
 		};
+		FFF44A442A92B80300069C06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFF44A452A92B80F00069C06 /* HomeModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +376,7 @@
 				FFF44A432A92A85C00069C06 /* UploadImageViewController.swift in Sources */,
 				FFF44A3E2A92A85500069C06 /* PhotoEditorViewController.swift in Sources */,
 				FFF44A192A92A48800069C06 /* FirstTaskViewModel.swift in Sources */,
+				FFF44A482A92B86B00069C06 /* UIIMage+Extension.swift in Sources */,
 				FFF44A1F2A92A48800069C06 /* DawnFilter.swift in Sources */,
 				FFF44A252A92A48800069C06 /* FirstTaskViewController.swift in Sources */,
 				FFF44A202A92A48800069C06 /* WiilowFilter.swift in Sources */,
@@ -377,6 +392,7 @@
 				FFF44A1C2A92A48800069C06 /* CustomFilter.swift in Sources */,
 				FFF44A392A92A85500069C06 /* Protocols.swift in Sources */,
 				FFF44A3C2A92A85500069C06 /* PhotoEditor+UITextView.swift in Sources */,
+				FFF44A462A92B80F00069C06 /* HomeModels.swift in Sources */,
 				FFF44A212A92A48800069C06 /* AmaroFilter.swift in Sources */,
 				FFF44A1E2A92A48800069C06 /* CharFilter.swift in Sources */,
 				FFF44A1D2A92A48800069C06 /* GoldFilter.swift in Sources */,
