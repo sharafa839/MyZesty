@@ -35,17 +35,8 @@ final class FirstTaskViewController: UIViewController {
         setupCollectionView()
         setupViewModelObservers()
         viewModel.loadImage()
-        loadImage()
     }
-    
-    private func loadImage() {
-            guard let imageURL =  Bundle.main.url(forResource: "33", withExtension: ".jpg") else { return }
-            guard let ciImage = CIImage(contentsOf: imageURL) else { return }
-            print(imageURL)
-                self.originalImageView.image = UIImage(ciImage: ciImage)
-            self.image = ciImage
-    }
-    
+
     private func applyFilter(indexPath:IndexPath) {
         let row = indexPath.row
         switch row {
@@ -82,6 +73,8 @@ final class FirstTaskViewController: UIViewController {
             viewModel.image.sink(receiveValue: {[weak self] image in
                 self?.viewModel.loadDataSource(image: image)
                 self?.image = image
+                guard  let cgImage = self?.context.createCGImage(image, from: image.extent) else { return }
+                self?.originalImageView.image = UIImage(cgImage: cgImage)
             }).store(in: &cancellableBag)
         
         viewModel.dataSource.sink(receiveValue: {[weak self] _ in

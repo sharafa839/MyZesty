@@ -68,6 +68,13 @@ extension PhotoEditorViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    private func hideToolbar(hide: Bool) {
+        topToolbar.isHidden = hide
+        topGradient.isHidden = hide
+        bottomToolbar.isHidden = hide
+        bottomGradient.isHidden = hide
+    }
+    
     func hideControls() {
         for control in hiddenControls {
             switch control {

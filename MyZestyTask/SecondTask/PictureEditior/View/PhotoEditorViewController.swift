@@ -74,12 +74,7 @@ final class PhotoEditorViewController: UIViewController {
         imageViewHeightConstraint.constant = size.height
     }
     
-    private func hideToolbar(hide: Bool) {
-        topToolbar.isHidden = hide
-        topGradient.isHidden = hide
-        bottomToolbar.isHidden = hide
-        bottomGradient.isHidden = hide
-    }
+   
 }
 
 extension PhotoEditorViewController: ColorDelegate {
