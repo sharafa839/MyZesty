@@ -9,12 +9,14 @@ import Foundation
 import UIKit
 
 // MARK: - Control
- enum control {
+enum control {
     case text
     case save
 }
 
 extension PhotoEditorViewController {
+    
+    //MARK: - IBActions
     
     @IBAction func textButtonTapped(_ sender: Any) {
         doneButton.isHidden = false
@@ -52,15 +54,15 @@ extension PhotoEditorViewController {
     @IBAction func saveButtonTapped(_ sender: AnyObject) {
         UIImageWriteToSavedPhotosAlbum(canvasView.toImage(),self, #selector(PhotoEditorViewController.image(_:withPotentialError:contextInfo:)), nil)
     }
-
+    
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         let image = self.canvasView.toImage()
         photoEditorDelegate?.doneEditing(image: image)
         self.dismiss(animated: true, completion: nil)
     }
-
-    //MAKR: helper methods
+    
+    //MARK: -  methods
     
     @objc func image(_ image: UIImage, withPotentialError error: NSErrorPointer, contextInfo: UnsafeRawPointer) {
         let alert = UIAlertController(title: "Image Saved", message: "Image successfully saved to Photos library", preferredStyle: UIAlertController.Style.alert)
@@ -78,9 +80,8 @@ extension PhotoEditorViewController {
     func hideControls() {
         for control in hiddenControls {
             switch control {
-            case .save:
-                saveButton.isHidden = true
-        
+                case .save:
+                    saveButton.isHidden = true
                 default: return
             }
         }

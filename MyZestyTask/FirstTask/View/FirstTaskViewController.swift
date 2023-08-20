@@ -9,8 +9,7 @@ import UIKit
 import CoreImage.CIFilterBuiltins
 
 final class FirstTaskViewController: UIViewController {
-
-   
+    
     //MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var originalImageView: UIImageView!
@@ -36,7 +35,7 @@ final class FirstTaskViewController: UIViewController {
         setupViewModelObservers()
         viewModel.loadImage()
     }
-
+    
     private func applyFilter(indexPath:IndexPath) {
         let row = indexPath.row
         switch row {
@@ -44,7 +43,7 @@ final class FirstTaskViewController: UIViewController {
                 let char = CharFilter(ciImage: image!)
                 viewModel.applyFilter(filter: char)
             case 1:
-               let willow = WillowFilter(ciImage: image!)
+                let willow = WillowFilter(ciImage: image!)
                 viewModel.applyFilter(filter: willow)
             case 2:
                 let gold = GoldFilter(ciImage: image!)
@@ -70,15 +69,15 @@ final class FirstTaskViewController: UIViewController {
     }
     
     private func setupViewModelObservers() {
-            viewModel.image.sink(receiveValue: {[weak self] image in
-                self?.viewModel.loadDataSource(image: image)
-                self?.image = image
-                guard  let cgImage = self?.context.createCGImage(image, from: image.extent) else { return }
-                self?.originalImageView.image = UIImage(cgImage: cgImage)
-            }).store(in: &cancellableBag)
+        viewModel.image.sink(receiveValue: {[weak self] image in
+            self?.viewModel.loadDataSource(image: image)
+            self?.image = image
+            guard  let cgImage = self?.context.createCGImage(image, from: image.extent) else { return }
+            self?.originalImageView.image = UIImage(cgImage: cgImage)
+        }).store(in: &cancellableBag)
         
         viewModel.dataSource.sink(receiveValue: {[weak self] _ in
-                self?.collectionView.reloadData()
+            self?.collectionView.reloadData()
         }).store(in: &cancellableBag)
         
         viewModel.filteredImage.sink(receiveValue: { [weak self] image in
@@ -109,7 +108,7 @@ extension FirstTaskViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         0
+        0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

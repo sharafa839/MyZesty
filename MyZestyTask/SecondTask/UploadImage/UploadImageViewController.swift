@@ -9,12 +9,15 @@ import UIKit
 
 class UploadImageViewController: UIViewController {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var imageView: UIImageView!
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    //MARK: - IBActions
     @IBAction func uploadImageButtonTapped(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -23,6 +26,7 @@ class UploadImageViewController: UIViewController {
     }
 }
 
+//MARK: - Delegates
 extension UploadImageViewController: PhotoEditorDelegate {
     
     func doneEditing(image: UIImage) {
