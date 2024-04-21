@@ -12,6 +12,6 @@ struct Tasks {
 }
 
 enum TaskType: String {
-    case first = "First Task"
-    case second = "Second Task"
+    case first = "Filter"
+    case second = "Add Text On Image"
 }

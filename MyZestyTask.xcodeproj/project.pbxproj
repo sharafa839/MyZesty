@@ -16,7 +16,7 @@
 		FFF448A72A90FA4300069C06 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF448A62A90FA4300069C06 /* UIVIew+Extension.swift */; };
 		FFF448BA2A910FC300069C06 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF448B82A910FC300069C06 /* HomeTableViewCell.swift */; };
 		FFF448BB2A910FC300069C06 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF448B92A910FC300069C06 /* HomeTableViewCell.xib */; };
-		FFF44A192A92A48800069C06 /* FirstTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A062A92A48800069C06 /* FirstTaskViewModel.swift */; };
+		FFF44A192A92A48800069C06 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A062A92A48800069C06 /* FilterViewModel.swift */; };
 		FFF44A1A2A92A48800069C06 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A082A92A48800069C06 /* FilterCollectionViewCell.swift */; };
 		FFF44A1B2A92A48800069C06 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF44A092A92A48800069C06 /* FilterCollectionViewCell.xib */; };
 		FFF44A1C2A92A48800069C06 /* CustomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A0C2A92A48800069C06 /* CustomFilter.swift */; };
@@ -27,8 +27,8 @@
 		FFF44A212A92A48800069C06 /* AmaroFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A112A92A48800069C06 /* AmaroFilter.swift */; };
 		FFF44A222A92A48800069C06 /* StrategyPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A122A92A48800069C06 /* StrategyPattern.swift */; };
 		FFF44A232A92A48800069C06 /* FiltersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A132A92A48800069C06 /* FiltersModel.swift */; };
-		FFF44A242A92A48800069C06 /* FirstTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF44A152A92A48800069C06 /* FirstTaskViewController.xib */; };
-		FFF44A252A92A48800069C06 /* FirstTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A162A92A48800069C06 /* FirstTaskViewController.swift */; };
+		FFF44A242A92A48800069C06 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF44A152A92A48800069C06 /* FilterViewController.xib */; };
+		FFF44A252A92A48800069C06 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A162A92A48800069C06 /* FilterViewController.swift */; };
 		FFF44A262A92A48800069C06 /* CustomCIFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A182A92A48800069C06 /* CustomCIFilter.swift */; };
 		FFF44A282A92A4C100069C06 /* 33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFF44A272A92A4C100069C06 /* 33.jpg */; };
 		FFF44A362A92A85500069C06 /* ColorsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF44A2C2A92A85500069C06 /* ColorsCollectionViewDelegate.swift */; };
@@ -57,7 +57,7 @@
 		FFF448A62A90FA4300069C06 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
 		FFF448B82A910FC300069C06 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		FFF448B92A910FC300069C06 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
-		FFF44A062A92A48800069C06 /* FirstTaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTaskViewModel.swift; sourceTree = "<group>"; };
+		FFF44A062A92A48800069C06 /* FilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		FFF44A082A92A48800069C06 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFF44A092A92A48800069C06 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		FFF44A0C2A92A48800069C06 /* CustomFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFilter.swift; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 		FFF44A112A92A48800069C06 /* AmaroFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmaroFilter.swift; sourceTree = "<group>"; };
 		FFF44A122A92A48800069C06 /* StrategyPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyPattern.swift; sourceTree = "<group>"; };
 		FFF44A132A92A48800069C06 /* FiltersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersModel.swift; sourceTree = "<group>"; };
-		FFF44A152A92A48800069C06 /* FirstTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTaskViewController.xib; sourceTree = "<group>"; };
-		FFF44A162A92A48800069C06 /* FirstTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTaskViewController.swift; sourceTree = "<group>"; };
+		FFF44A152A92A48800069C06 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		FFF44A162A92A48800069C06 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		FFF44A182A92A48800069C06 /* CustomCIFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCIFilter.swift; sourceTree = "<group>"; };
 		FFF44A272A92A4C100069C06 /* 33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 33.jpg; sourceTree = "<group>"; };
 		FFF44A2C2A92A85500069C06 /* ColorsCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsCollectionViewDelegate.swift; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 			children = (
 				FFF44A272A92A4C100069C06 /* 33.jpg */,
 				FFF448A52A90FA3400069C06 /* Extensions */,
-				FFF44A042A92A48800069C06 /* FirstTask */,
-				FFF44A292A92A7DD00069C06 /* SecondTask */,
+				FFF44A042A92A48800069C06 /* Filter */,
+				FFF44A292A92A7DD00069C06 /* Second */,
 				FFF448872A9037CD00069C06 /* Home */,
 				FFF448732A90379900069C06 /* AppDelegate.swift */,
 				FFF4487C2A90379C00069C06 /* Assets.xcassets */,
@@ -167,7 +167,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FFF44A042A92A48800069C06 /* FirstTask */ = {
+		FFF44A042A92A48800069C06 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
 				FFF44A052A92A48800069C06 /* ViewModel */,
@@ -176,13 +176,13 @@
 				FFF44A142A92A48800069C06 /* View */,
 				FFF44A172A92A48800069C06 /* CustomFilter */,
 			);
-			path = FirstTask;
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		FFF44A052A92A48800069C06 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FFF44A062A92A48800069C06 /* FirstTaskViewModel.swift */,
+				FFF44A062A92A48800069C06 /* FilterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,9 +199,8 @@
 		FFF44A0A2A92A48800069C06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FFF44A0B2A92A48800069C06 /* Filters */,
-				FFF44A122A92A48800069C06 /* StrategyPattern.swift */,
 				FFF44A132A92A48800069C06 /* FiltersModel.swift */,
+				FFF44A0B2A92A48800069C06 /* Filters */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +208,7 @@
 		FFF44A0B2A92A48800069C06 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				FFF44A122A92A48800069C06 /* StrategyPattern.swift */,
 				FFF44A0C2A92A48800069C06 /* CustomFilter.swift */,
 				FFF44A0D2A92A48800069C06 /* GoldFilter.swift */,
 				FFF44A0E2A92A48800069C06 /* CharFilter.swift */,
@@ -222,8 +222,8 @@
 		FFF44A142A92A48800069C06 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FFF44A152A92A48800069C06 /* FirstTaskViewController.xib */,
-				FFF44A162A92A48800069C06 /* FirstTaskViewController.swift */,
+				FFF44A152A92A48800069C06 /* FilterViewController.xib */,
+				FFF44A162A92A48800069C06 /* FilterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,13 +236,13 @@
 			path = CustomFilter;
 			sourceTree = "<group>";
 		};
-		FFF44A292A92A7DD00069C06 /* SecondTask */ = {
+		FFF44A292A92A7DD00069C06 /* Second */ = {
 			isa = PBXGroup;
 			children = (
 				FFF44A3F2A92A85C00069C06 /* UploadImage */,
 				FFF44A2A2A92A85500069C06 /* PictureEditior */,
 			);
-			path = SecondTask;
+			path = Second;
 			sourceTree = "<group>";
 		};
 		FFF44A2A2A92A85500069C06 /* PictureEditior */ = {
@@ -355,7 +355,7 @@
 				FFF44A1B2A92A48800069C06 /* FilterCollectionViewCell.xib in Resources */,
 				FFF44A3B2A92A85500069C06 /* PhotoEditorViewController.xib in Resources */,
 				FFF44A372A92A85500069C06 /* ColorCollectionViewCell.xib in Resources */,
-				FFF44A242A92A48800069C06 /* FirstTaskViewController.xib in Resources */,
+				FFF44A242A92A48800069C06 /* FilterViewController.xib in Resources */,
 				FFF4487D2A90379C00069C06 /* Assets.xcassets in Resources */,
 				FFF44A282A92A4C100069C06 /* 33.jpg in Resources */,
 				FFF448BB2A910FC300069C06 /* HomeTableViewCell.xib in Resources */,
@@ -375,10 +375,10 @@
 				FFF44A262A92A48800069C06 /* CustomCIFilter.swift in Sources */,
 				FFF44A432A92A85C00069C06 /* UploadImageViewController.swift in Sources */,
 				FFF44A3E2A92A85500069C06 /* PhotoEditorViewController.swift in Sources */,
-				FFF44A192A92A48800069C06 /* FirstTaskViewModel.swift in Sources */,
+				FFF44A192A92A48800069C06 /* FilterViewModel.swift in Sources */,
 				FFF44A482A92B86B00069C06 /* UIIMage+Extension.swift in Sources */,
 				FFF44A1F2A92A48800069C06 /* DawnFilter.swift in Sources */,
-				FFF44A252A92A48800069C06 /* FirstTaskViewController.swift in Sources */,
+				FFF44A252A92A48800069C06 /* FilterViewController.swift in Sources */,
 				FFF44A202A92A48800069C06 /* WiilowFilter.swift in Sources */,
 				FFF44A222A92A48800069C06 /* StrategyPattern.swift in Sources */,
 				FFF448742A90379900069C06 /* AppDelegate.swift in Sources */,

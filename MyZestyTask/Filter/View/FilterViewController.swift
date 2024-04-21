@@ -8,19 +8,19 @@
 import UIKit
 import CoreImage.CIFilterBuiltins
 
-final class FirstTaskViewController: UIViewController {
+final class FilterViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var originalImageView: UIImageView!
     
     //MARK: - Properties
-    private let viewModel: FirstTaskViewModelProtocol
+    private let viewModel: FilterViewModelProtocol
     private var image: CIImage? = nil
     private var cancellableBag = CancellableBag()
     private let context = CIContext(options: nil)
     //MARK: - Init
-    init(viewModel: FirstTaskViewModel) {
+    init(viewModel: FilterViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -87,7 +87,7 @@ final class FirstTaskViewController: UIViewController {
 }
 
 
-extension FirstTaskViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FilterViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.dataSource.value.count

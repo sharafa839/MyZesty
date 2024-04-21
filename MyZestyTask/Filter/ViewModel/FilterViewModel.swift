@@ -16,7 +16,7 @@ typealias PassSubject<Value> = PassthroughSubject<Value, Never>
 typealias ValueSubject<Value> = CurrentValueSubject<Value, Never>
 
 
-protocol FirstTaskViewModelProtocol {
+protocol FilterViewModelProtocol {
     var dataSource: ValueSubject<[Filters]> { get }
     var image: ValueSubject<CIImage> { get }
     var filteredImage: PassSubject<UIImage> { get }
@@ -25,7 +25,7 @@ protocol FirstTaskViewModelProtocol {
     func loadDataSource(image: CIImage)
 }
 
-final class FirstTaskViewModel: FirstTaskViewModelProtocol {
+final class FilterViewModel: FilterViewModelProtocol {
     
     //MARK: - Properties
     var dataSource = ValueSubject<[Filters]>([])

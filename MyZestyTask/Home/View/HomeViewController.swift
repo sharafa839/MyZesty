@@ -17,12 +17,12 @@ class HomeViewController: UITableViewController {
     }
     
     private func navigateToFirstTask() {
-        let firstTaskViewModel = FirstTaskViewModel()
-        let firstTaskViewController = FirstTaskViewController(viewModel: firstTaskViewModel)
+        let firstTaskViewModel = FilterViewModel()
+        let firstTaskViewController = FilterViewController(viewModel: firstTaskViewModel)
         navigationController?.pushViewController(firstTaskViewController, animated: true)
     }
     
-    private func navigateToSeocndTask() {
+    private func navigateToSecondTask() {
         let uploadImageViewController = UploadImageViewController()
         navigationController?.pushViewController(uploadImageViewController, animated: true)
     }
@@ -46,7 +46,7 @@ class HomeViewController: UITableViewController {
         if taskType == .first {
             navigateToFirstTask()
         }else {
-            navigateToSeocndTask()
+            navigateToSecondTask()
         }
     }
 }
